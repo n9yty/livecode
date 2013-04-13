@@ -1987,7 +1987,8 @@ bool export_system_root_cert_stack(STACK_OF(X509) *&r_x509_stack)
 		for (UInt32 i = 0; t_success && i < t_anchor_count; i++)
 		{
 			X509 *t_x509 = NULL;
-			UInt8* t_data_ptr = NULL;
+			//UInt8* t_data_ptr = NULL;
+			const unsigned char* t_data_ptr = NULL;
 			UInt32 t_data_len = 0;
 			
 			CSSM_DATA t_cert_data;
